@@ -1,0 +1,95 @@
+[[1;34mINFO[m] Scanning for projects...
+[[1;34mINFO[m] ------------------------------------------------------------------------
+[[1;34mINFO[m] Detecting the operating system and CPU architecture
+[[1;34mINFO[m] ------------------------------------------------------------------------
+[[1;34mINFO[m] os.detected.name: linux
+[[1;34mINFO[m] os.detected.arch: x86_64
+[[1;34mINFO[m] os.detected.version: 6.6
+[[1;34mINFO[m] os.detected.version.major: 6
+[[1;34mINFO[m] os.detected.version.minor: 6
+[[1;34mINFO[m] os.detected.release: ubuntu
+[[1;34mINFO[m] os.detected.release.version: 24.04
+[[1;34mINFO[m] os.detected.release.like.ubuntu: true
+[[1;34mINFO[m] os.detected.release.like.debian: true
+[[1;34mINFO[m] os.detected.classifier: linux-x86_64
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m-------------< [0;36mserialization.test:serialization-benchmark[0;1m >-------------[m
+[[1;34mINFO[m] [1mBuilding serialization-benchmark 1.0-SNAPSHOT[m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mexec-maven-plugin:3.6.3:java[m [1m(default-cli)[m @ [36mserialization-benchmark[0;1m ---[m
+Serialization Benchmark
+
+
+▶ Testing payload: Small (5 items)
+  Iterations per trial: 1000000
+  JSON (Jackson)...
+    Trial 1/10 completed    Trial 2/10 completed    Trial 3/10 completed    Trial 4/10 completed    Trial 5/10 completed    Trial 6/10 completed    Trial 7/10 completed    Trial 8/10 completed    Trial 9/10 completed    Trial 10/10 completed
+  Protocol Buffers...
+    Trial 1/10 completed    Trial 2/10 completed    Trial 3/10 completed    Trial 4/10 completed    Trial 5/10 completed    Trial 6/10 completed    Trial 7/10 completed    Trial 8/10 completed    Trial 9/10 completed    Trial 10/10 completed
+
+▶ Testing payload: Medium (100 items)
+  Iterations per trial: 10000
+  JSON (Jackson)...
+    Trial 1/10 completed    Trial 2/10 completed    Trial 3/10 completed    Trial 4/10 completed    Trial 5/10 completed    Trial 6/10 completed    Trial 7/10 completed    Trial 8/10 completed    Trial 9/10 completed    Trial 10/10 completed
+  Protocol Buffers...
+    Trial 1/10 completed    Trial 2/10 completed    Trial 3/10 completed    Trial 4/10 completed    Trial 5/10 completed    Trial 6/10 completed    Trial 7/10 completed    Trial 8/10 completed    Trial 9/10 completed    Trial 10/10 completed
+
+▶ Testing payload: Large (10,000 items)
+  Iterations per trial: 1000
+  JSON (Jackson)...
+    Trial 1/10 completed    Trial 2/10 completed    Trial 3/10 completed    Trial 4/10 completed    Trial 5/10 completed    Trial 6/10 completed    Trial 7/10 completed    Trial 8/10 completed    Trial 9/10 completed    Trial 10/10 completed
+  Protocol Buffers...
+    Trial 1/10 completed    Trial 2/10 completed    Trial 3/10 completed    Trial 4/10 completed    Trial 5/10 completed    Trial 6/10 completed    Trial 7/10 completed    Trial 8/10 completed    Trial 9/10 completed    Trial 10/10 completed
+
+
+FINAL RESULTS:
+
+JSON (Jackson)          Small (5 items)   
+  Serialization:        1,564.8 ns  (σ = ±  3.1%)
+  Deserialization:      3,440.1 ns  (σ = ±  1.0%)
+  End-to-End:           5,284.0 ns  (σ = ±  1.4%)
+  Size:                 646 B
+
+Protocol Buffers        Small (5 items)   
+  Serialization:          852.8 ns  (σ = ±  3.6%)
+  Deserialization:        589.2 ns  (σ = ±  3.2%)
+  End-to-End:           1,585.0 ns  (σ = ±  1.5%)
+  Size:                 344 B
+
+JSON (Jackson)          Medium (100 items)
+  Serialization:       32,466.8 ns  (σ = ±  3.8%)
+  Deserialization:     63,441.0 ns  (σ = ±  4.2%)
+  End-to-End:          98,558.9 ns  (σ = ±  4.0%)
+  Size:              12.82 KB
+
+Protocol Buffers        Medium (100 items)
+  Serialization:       17,525.8 ns  (σ = ±  4.4%)
+  Deserialization:     10,195.0 ns  (σ = ±  4.1%)
+  End-to-End:          28,797.3 ns  (σ = ±  2.6%)
+  Size:               6.94 KB
+
+JSON (Jackson)          Large (10,000 items)
+  Serialization:    3,671,663.3 ns  (σ = ±  1.4%)
+  Deserialization:  7,186,753.6 ns  (σ = ±  1.6%)
+  End-to-End:      11,174,756.2 ns  (σ = ±  0.8%)
+  Size:               1.27 MB
+
+Protocol Buffers        Large (10,000 items)
+  Serialization:    2,171,748.7 ns  (σ = ±  2.7%)
+  Deserialization:  1,408,974.7 ns  (σ = ±  2.3%)
+  End-to-End:       3,705,992.6 ns  (σ = ±  3.4%)
+  Size:             714.41 KB
+
+
+Benchmark Configuration:
+Small payload (5 itens): 1000000 iterations per trial
+Medium payload (100 itens): 10000 iterations per trial
+Large payload (10.000 itens): 1000 iterations per trial
+Trials per configuration: 10
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1;32mBUILD SUCCESS[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] Total time:  07:56 min
+[[1;34mINFO[m] Finished at: 2026-03-03T23:03:58Z
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
